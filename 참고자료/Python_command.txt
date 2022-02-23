@@ -1,0 +1,6 @@
+django : pip install django
+environ : pip install django-envrion
+
+requirements 파일생성 : pip freeze > requirements.txt
+
+requirements 설치: pip install -r requirements.txt

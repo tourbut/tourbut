@@ -1,2 +1,0 @@
-django : pip install django
-environ : pip install django-envrion
