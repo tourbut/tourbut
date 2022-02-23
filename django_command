@@ -2,3 +2,6 @@
 
 서버실행: python manage.py runserver
 앱생성: python manage.py startapp accountapp
+
+
+테스트내용입력
