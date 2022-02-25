@@ -4,14 +4,14 @@
     {% include 'head.html' %}
 </head>
 <body>
-    <div style="height: 10rem; background-color: #38df81; border-radius: 1rem; margin: 2rem;">
-    </div>
 
-    <div style="height: 10rem; background-color: #38df81; border-radius: 1rem; margin: 2rem;">
-    </div>
+    {% include 'header.html' %}
 
-    <div style="height: 10rem; background-color: #38df81; border-radius: 1rem; margin: 2rem;">
-    </div>
+    {% block content %}
+    {% endblock %}
+
+    {% include 'footer.html' %}
+
 </body>
 
 </html>
