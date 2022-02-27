@@ -1,0 +1,19 @@
+
+.Tourbut_Logo{
+    font-family: 'Gugi', cursive;
+}
+
+.Tourbut_footer{
+    text-align:center;
+    margin-top: 2rem;
+}
+
+.Tourbut_header{
+    text-align:center;
+    margin: 2rem 0;
+}
+
+
+.Tourbut_footer_button{
+    font-size: .6rem;
+}
