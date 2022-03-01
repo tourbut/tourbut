@@ -2,3 +2,8 @@
 
 서버실행: python manage.py runserver
 앱생성: python manage.py startapp accountapp
+
+
+models.py 과 DB서버 객체 연동 :python manage.py makemigrations
+
+장고 DB에 적용: python manage.py migrate
