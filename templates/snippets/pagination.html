@@ -1,0 +1,18 @@
+<div style="text-align : center; margin : 1rem 0;">
+  {% if i_page_obj.has_previous %}
+  <a href="{% url 'articleapp:list' %}?page={{ i_page_obj.previous_page_number }}"
+     class="btn btn-secondary rounded-pill">
+    {{ i_page_obj.previous_page_number }}
+  </a>
+  {% endif %}
+  <a href="{% url 'articleapp:list' %}?page={{ i_page_obj.number }}"
+     class="btn btn-secondary rounded-pill active">
+    {{ i_page_obj.number }}
+  </a>
+  {% if i_page_obj.has_next %}
+  <a href="{% url 'articleapp:list' %}?page={{ i_page_obj.next_page_number }}"
+     class="btn btn-secondary rounded-pill">
+    {{ i_page_obj.next_page_number }}
+  </a>
+  {% endif %}
+</div>

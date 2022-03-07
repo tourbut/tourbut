@@ -20,33 +20,31 @@
 
 </style>
 
-<div class="container">
-  <div class="item1">
-    <img src="https://picsum.photos/200/300">
+  {% if article_list %}
+  <div class="container">
+    {% for article in article_list %}
+    <a href="{% url 'articleapp:detail' pk=article.pk %}">
+      <div>
+        {% include 'snippets/card.html' with i_article=article %}
+      </div>
+    </a>
+    {% endfor %}
   </div>
-  <div class="item2">
-    <img src="https://picsum.photos/200/180">
+  <script src="{% static 'js/magicgrid.js' %}"></script>
+  {% else %}
+  <div style="text-align: center ">
+    <h1>No Article</h1>
   </div>
-  <div class="item3">
-    <img src="https://picsum.photos/200/200">
-  </div>
-  <div class="item4">
-    <img src="https://picsum.photos/200/360">
-  </div>
-  <div class="item5">
-    <img src="https://picsum.photos/200/260">
-  </div>
-  <div class="item6">
-    <img src="https://picsum.photos/200/300">
-  </div>
-</div>
+  {% endif %}
 
-<div style="text-align: center ">
-  <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill col-6 mt-3">
-    Create
-  </a>
-</div>
+  {% include 'snippets/pagination.html' with i_page_obj=page_obj %}
 
-    <script src="{% static 'js/magicgrid.js' %}"></script>
+  <div style="text-align: center ">
+    <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill col-6 mt-3">
+      Create
+    </a>
+  </div>
+
+
 
 {% endblock %}
