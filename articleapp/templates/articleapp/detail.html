@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<div style="text-align: center">
+    <div>
+        {{ target_article.title }}
+    </div>
+    <img src="{{ target_article.image.url }}" alt="">
+    <p>
+        {{ target_article.content }}
+    </p>
+
+    <a href="{% url 'articleapp:update' pk=target_article.pk %}">
+        <p>Update</p>
+    </a>
+
+    <a href="{% url 'articleapp:delete' pk=target_article.pk %}">
+        <p>Delete</p>
+    </a>
+</div>
+
+{% endblock %}
