@@ -11,11 +11,16 @@
         </h1>
     </div>
     <hr>
-    <p>
-        {{ target_project.description }}
-    </p>
-
+    <div>
+        <p>
+            {{ target_project.description }}
+        </p>
+    </div>
     <hr>
+
+    <div>
+        {% include 'snippets/list_tourbut.html' with article_list=object_list %}
+    </div>
 </div>
 
 {% endblock %}
