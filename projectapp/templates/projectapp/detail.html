@@ -16,6 +16,23 @@
             {{ target_project.description }}
         </p>
     </div>
+
+    <div class="text-center">
+        {% if user.is_authenticated %}
+          {% if not subscription %}
+        <a href="{% url 'subscribapp:subscribe' %}?project_pk={{ target_project.pk }}">
+            Subscribe
+        </a>
+           {% else %}
+        <a href="{% url 'subscribapp:subscribe' %}?project_pk={{ target_project.pk }}">
+            Unsubscribe
+        </a>
+        {% endif %}
+
+        {% endif %}
+
+    </div>
+
     <hr>
 
     <div>
